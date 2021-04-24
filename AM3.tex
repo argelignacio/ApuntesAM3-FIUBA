@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage[open]{bookmark}
+\setlength{\parindent}{0pt}
+\usepackage[left=1.5cm, top=2cm, bottom=2cm, right= 1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[spanish]{babel}
+
+\title{Resumen Análisis III}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Números complejos}
+
+\subsection*{Propiedades básicas}
+
+\begin{itemize}
+    \item $Arg(Z)=\begin{cases} \arctg \left( \dfrac{b}{a} \right) &\qquad a>0  \\ \arctg \left( \dfrac{b}{a} \right) + \pi &\qquad b \geq 0 \ ; \ a<0 \\ \arctg \left( \dfrac{b}{a} \right) - \pi &\qquad b < 0 \ ; \ a<0 \\ \hspace{3.5mm} \frac{\pi}{2} &\qquad b>0 \ ; \ a=0 \\ -\frac{\pi}{2} &\qquad b<0 \ ; \ a=0  \end{cases}$
+    \item $\bar{\bar{z}} = z$
+    \item $\overline{z+w}= \bar{z}+\bar{w}$
+    \item $z.\bar{z}=|z|^2$
+    \item $\overline{z.w}=\bar{z}.\bar{w}$
+    \item $\dfrac{1}{z}=\dfrac{\bar{z}}{|z|^2}$
+    \item $arg(z.z')=arg(z)+arg(z')$
+    \item $arg(\dfrac{z}{z'})=arg(z)-arg(z')$
+    \item $|z.z'|=|z|.|z'|$
+    \item $|\dfrac{z}{z}|=\dfrac{|z|}{|z|}$
+    \item $|z|^n=|z^n|$
+    \item $arg(z^n)=n\cdot arg(z)$
+    \item $z^{-1}=\dfrac{1}{z^2}\cdot|\bar{z}|$
+    \item $arg(z^{-1}) = -arg(z)$
+    \item Desigualdad Triangular:
+    \begin{itemize}
+        \item $|z_1 + z_2| \leq |z_1|+|z_2|$
+        \item $|z_1 + z_2| \geq |z_1|-|z_2|$; $z_1 \geq z_2$
+    \end{itemize}
+\end{itemize}   
+
+
+    
+
+\subsection*{Forma exponencial}
+La forma exponencial de un numero complejo es:
+
+\begin{align*}
+     re^{i\theta}= r\cos(\theta) + r\sin(\theta)
+\end{align*}
+
+\subsection*{Observaciones}
+\singlespacing
+    \begin{align*}
+    |e^{i\theta}|&=1  &   e^{(i\theta)-1}&=e^{i-\theta}\\
+    e^{i\theta}\cdot e^{i\theta'} &= e^{i(\theta+\theta)}  & e^{i\theta}&= e^{(i\theta+2k\pi)}
+    \end{align*}
+\subsection*{Potencias y raíces}
+\doublespacing
+Potencias: \\
+$z=x+iy \Rightarrow z^n = (x+iy)^n = \sum_{k=0}^{\infty} \binom{n}{k} x^{n-k}(iy)^k$\\
+Pero es mejor encarar el problema de la forma exponencial:\\
+$z=re^{i\theta} \Rightarrow z^n = r^n e^{in\theta}$\\
+Raíces:\\
+$\sqrt[n]{{z}}$? \hspace{1cm}Buscamos:\hspace{1cm} $w/w^n = z$
+
+La solucion es de la forma $=\begin{cases}\rho = \sqrt[n]{r} \\ \alpha = \dfrac{\theta}{n} + 2k\pi \hspace{1cm} k\in \mathbb{R}\end{cases}$
+
+\subsection*{Funciones Complejas:}
+
+$ f(z) = f(x+iy) = u(x,y) + iv(x,y)$ con u y v campos escalares reales.\\
+$ f(z) = f(re^{i\theta}) = U(r,\theta) + iV(r,\theta)$
+
+\subsection*{Limite}
+$f: D \subset \mathbb{C} \to  \mathbb{C} $ , $ z_{0}$: punto de acumulacion de D.
+
+   $\lim\limits_{z \to z_{0}}f(z)=l \Leftrightarrow $ para cada $\epsilon >0$, existe un $\delta > 0$ tal que :\\
+    \hspace*{3cm} $ 0<|z-z_{0}|<\delta\Rightarrow |f(z-l)| < \epsilon z\in D$\\
+    Propiedades:
+    \begin{itemize}
+        \item  $\lim\limits_{z \to z_{0}}f(z)=l \Leftrightarrow  \lim\limits_{z \to z_{0}}|f(z_{0}-l)|=0  $
+        \item El limite se comporta de forma esperada con las operaciones basicas.
+        \item $\lim\limits_{z \to z_{0}}(f(z))=a+bi \Leftrightarrow \begin{cases}
+            \lim\limits_{(x,y) \to (x_{0},y_{0})}u(x,y)=a\\
+            \lim\limits_{(x,y) \to (x_{0},y_{0})}v(x,y)=b
+        \end{cases} $
+    \end{itemize}   
+
+
+\end{document}
